@@ -1,0 +1,44 @@
+﻿@model YandexDzen.Models.PostViewModel
+
+@{
+    ViewData["Title"] = "Пост";
+}
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+           <a>Автор</a>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LoginUser)
+        </dd>
+        <dt class = "col-sm-2">
+            <a>Название</a>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Namepost)
+        </dd>
+         @*<dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.path)
+        </dt>
+        <dd class = "col-sm-10">
+           <img src="@Html.DisplayFor(model => model.path)
+        </dd>
+         
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Main)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Main)
+        </dd>*@
+    </dl>
+</div>
+
+<div> <img src="@Model.path"  height="500" /></div>
+
+<div>@Model.Main</div>
+    
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
